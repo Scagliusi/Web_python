@@ -36,7 +36,7 @@ class Usuario:
         conn.commit()
 
         # Recupera o id do usuário recém-criado
-        cursor.execute('SELECT @@IDENTITY')  # ou use SCOPE_IDENTITY()
+        cursor.execute('SELECT @@IDENTITY') 
         new_id = cursor.fetchone()[0]
         conn.close()
 
