@@ -26,7 +26,7 @@ class Usuario:
     
     @classmethod ##Um @classmethod é chamado antes de qualquer objeto ser criado, e usa cls(...) para instanciar (criar) um novo objeto da própria classe, retornando ele no final.
     def criar_usuario(cls, username, senha):
-        if cls.buscar_por_username(username):  # já existe?
+        if cls.buscar_por_username(username):
             raise ValueError("Usuário já existe.")
 
         hashed = hashlib.sha256(senha.encode()).hexdigest()
