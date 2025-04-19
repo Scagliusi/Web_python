@@ -2,5 +2,4 @@ streamlit_cookies_manager
 pyodbc
 streamlit
 numpy
-hashlib
 pandas
