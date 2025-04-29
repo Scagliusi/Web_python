@@ -3,6 +3,8 @@ import hashlib
 import os
 from dotenv import load_dotenv
 
+load_dotenv()
+
 def conectar():
     conexao = pyodbc.connect(
         f"DRIVER={{ODBC Driver 17 for SQL Server}};"
