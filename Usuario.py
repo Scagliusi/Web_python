@@ -21,7 +21,7 @@ class Usuario:
         conn.close
 
         if row:
-            return cls(*row) ## * serve como um desempacotador 
+            return cls(*row) ## * serve como um desempacotador de tuplas 
         return None
     
     @classmethod ##Um @classmethod é chamado antes de qualquer objeto ser criado, e usa cls(...) para instanciar (criar) um novo objeto da própria classe, retornando ele no final.

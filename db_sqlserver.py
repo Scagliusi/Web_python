@@ -1,15 +1,17 @@
 import pyodbc
 import hashlib
+import os
+from dotenv import load_dotenv
 
 def conectar():
     conexao = pyodbc.connect(
-        'DRIVER={ODBC Driver 17 for SQL Server};' 
-        'SERVER=192.168.15.183;'
-        'DATABASE=SistemaLogin;'
-        'Trusted_Connection=yes;'
-        'UID=login_geral;' 
-        'PWD=Senha123@;'
-        'Encrypt=no;'
+        f"DRIVER={{ODBC Driver 17 for SQL Server}};"
+        f"SERVER={os.getenv('DB_SERVER')};"
+        f"DATABASE={os.getenv('DB_DATABASE')};"
+        "Trusted_Connection=yes;"
+        f"UID={os.getenv('DB_USERNAME')};"
+        f"PWD={os.getenv('DB_PASSWORD')};"
+        "Encrypt=no;"
     )
     return conexao
 

@@ -28,7 +28,6 @@ def verificar_expiracao_cookie(cookies,cookie_name):
     return False
 
 
-# Função principal
 def pagina_login(cookies):
     # Inicializa as variáveis para controlar o estado de login
     login_realizado = cookies.get("login_realizado")
