@@ -3,3 +3,4 @@ pyodbc
 streamlit
 numpy
 pandas
+dotenv
